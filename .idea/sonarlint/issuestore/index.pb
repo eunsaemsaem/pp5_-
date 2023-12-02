@@ -32,3 +32,13 @@ Q.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+V
+&src/main/webapp/WEB-INF/views/post.jsp,2/6/2624873f6e15ffb5fe836d0751a8b0b483b76be4
+Y
+)src/main/webapp/WEB-INF/views/addform.jsp,f/9/f9624c9fa33bff76929fb41d73f40cd089250405
+Z
+*src/main/webapp/WEB-INF/views/editform.jsp,b/7/b7af1e3b580bf861e4e2a0265e79b9e27c82573d
+]
+-src/main/webapp/WEB-INF/views/addPostform.jsp,9/7/9708a65af2492c84b67951b6836870a420c3fbf1
+V
+&src/main/webapp/WEB-INF/views/list.jsp,6/0/60d52844360849de351da30c0f55f739e6b7ebe7

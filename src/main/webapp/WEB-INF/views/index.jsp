@@ -11,6 +11,7 @@
     <title>title</title>
 </head>
 <body>
-hello 안녕
+<h1>hello 안녕<h1>
+    <p><a href="board/list">list</a></p>
 </body>
 </html>
