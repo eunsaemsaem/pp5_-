@@ -20,7 +20,7 @@
             <td>${u.getTitle()}</td>
             <td>${u.getWriter()}</td>
             <td><a href="editform/${u.seq}">Edit</a></td>
-            <td><a href="javascript:deleteok('${u.seq}')">delete</a></td>
+            <td><a href="deleteok/${u.seq}">delete</a></td>
         </tr>
     </c:forEach>
 </table>

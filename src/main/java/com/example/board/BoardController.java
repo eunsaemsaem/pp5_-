@@ -39,12 +39,12 @@ public class BoardController {
         return "redirect: list";
     }
 
-    @RequestMapping(value = "/edit", method = RequestMethod.GET)
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public String editPost() {
         return "editform";
     }
 
-    @RequestMapping(value = "/editok", method = RequestMethod.POST)
+    @RequestMapping(value = "/editok/{id}", method = RequestMethod.POST)
     public String editPostOk(BoardVO vo) {
         int i = boardService.updateBoard(vo);
         if (i == 0)

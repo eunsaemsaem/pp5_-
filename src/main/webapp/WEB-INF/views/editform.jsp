@@ -14,7 +14,7 @@
 <body>
 
 <%--@elvariable id="boardVO" type="com"--%>
-<form:form commandName="boardVO" method="post" action="../editok">
+<form:form commandName="boardVO" method="post" action="../editok/${seq}">
     <form:hidden path="seq"/>
     <table id="edit">
         <tr><td>title</td><td><form:input path="title"/></td></tr>
