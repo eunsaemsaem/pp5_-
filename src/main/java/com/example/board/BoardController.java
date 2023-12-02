@@ -39,12 +39,15 @@ public class BoardController {
         return "redirect: list";
     }
 
-    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
-    public String editPost() {
+
+    @RequestMapping(value = "/editform/{id}", method = RequestMethod.GET)
+    public String editPost(@PathVariable("id") int id, Model model) {
+        BoardVO boardVO = boardService.getBoard(id);
+        model.addAttribute("boardVO", boardVO);
         return "editform";
     }
 
-    @RequestMapping(value = "/editok/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "/editok", method = RequestMethod.POST)
     public String editPostOk(BoardVO vo) {
         int i = boardService.updateBoard(vo);
         if (i == 0)
@@ -55,7 +58,7 @@ public class BoardController {
     }
 
     @RequestMapping(value = "/deleteok/{id}", method = RequestMethod.GET)
-    public String deletePost(@PathVariable("id") int id) {
+    public String deletePostOk(@PathVariable("id") int id) {
         int i = boardService.deleteBoard(id);
         if (i == 0)
             System.out.println("fail to delete data");

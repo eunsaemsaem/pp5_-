@@ -5,6 +5,24 @@ public class BoardVO {
     private int seq;
     private String title;
     private String writer;
+    private String content;
+    private String category;
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 
     public int getSeq() {
         return seq;

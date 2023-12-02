@@ -10,6 +10,13 @@
 <html>
 <head>
     <title>board list</title>
+
+    <script>
+        function delete_ok(id) {
+            var a = comfirm("정말 삭제하시겠습니까?");
+            if (a) location.href='deleteok/' + id;
+        }
+    </script>
 </head>
 <body>
 
@@ -19,8 +26,10 @@
             <td>${u.getSeq()}</td>
             <td>${u.getTitle()}</td>
             <td>${u.getWriter()}</td>
+            <td>${u.getContent()}</td>
+            <td>${u.getCategory()}</td>
             <td><a href="editform/${u.seq}">Edit</a></td>
-            <td><a href="deleteok/${u.seq}">delete</a></td>
+            <td><a href="javascript:delete_ok('${u.seq}')">delete</a></td>
         </tr>
     </c:forEach>
 </table>

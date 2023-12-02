@@ -13,15 +13,15 @@
 </head>
 <body>
 
-<%--@elvariable id="boardVO" type="com"--%>
-<form:form commandName="boardVO" method="post" action="../editok/${seq}">
+<%--@elvariable id="boardVO" type=""--%>
+<form:form modelAttribute="boardVO" method="post" action="../editok">
     <form:hidden path="seq"/>
     <table id="edit">
         <tr><td>title</td><td><form:input path="title"/></td></tr>
         <tr><td>writer</td><td><form:input path="writer"/></td></tr>
     </table>
-    <input type="submit" value="edit">
-    <input type="button" value="cancel" onclick="history.back()">
+    <input type="submit" class="postlink" value="edit">
+    <input type="button" class="postlink" value="cancel" onclick="history.back()">
 </form:form>
 
 </body>

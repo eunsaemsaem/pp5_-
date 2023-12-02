@@ -25,6 +25,8 @@ public class BoardDAO {
                 one.setSeq(rs.getInt("seq"));
                 one.setTitle(rs.getString("title"));
                 one.setWriter(rs.getString("writer"));
+                one.setContent(rs.getString("content"));
+                one.setCategory(rs.getString("category"));
                 return one;
             }
         });
@@ -33,9 +35,11 @@ public class BoardDAO {
     }
 
     public int insertBoard(BoardVO vo) {
-        String sql = "insert into BOARD (title, writer) values ("
+        String sql = "insert into BOARD (title, writer, content, category) values ("
         + "'" + vo.getTitle() + "',"
-        + "'" + vo.getWriter() + "')";
+        + "'" + vo.getWriter() + "',"
+        + "'" + vo.getContent() + "',"
+        + "'" + vo.getCategory() + "')";
         return jdbcTemplate.update(sql);
     }
 
@@ -45,7 +49,7 @@ public class BoardDAO {
     }
 
     public int updateBoard(BoardVO vo) {
-        String sql = "update BOARD set title='" + vo.getTitle() +"'," + " title='" + vo.getTitle() + "'," + "writer='" + vo.getWriter() + "' where seq=" + vo.getSeq();
+        String sql = "update BOARD set title='" + vo.getTitle() +"'," + "writer='" + vo.getWriter() + "'," + "content='" +vo.getContent() + "'," + "category='" + vo.getCategory() + "' where seq=" + vo.getSeq();
         return jdbcTemplate.update(sql);
     }
 
@@ -58,6 +62,8 @@ public class BoardDAO {
                 one.setSeq(rs.getInt("seq"));
                 one.setTitle(rs.getString("title"));
                 one.setWriter(rs.getString("writer"));
+                one.setContent(rs.getString("content"));
+                one.setCategory(rs.getString(("category")));
                 return one;
             }
         });
